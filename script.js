@@ -20,16 +20,20 @@ if( anni < 18){
 
     sconto = (prezzo * 20) /100;
     prezzo = prezzo - sconto; 
+    
 
 }else if( anni >  65)
 {
     sconto = (prezzo * 40) /100;
     prezzo = prezzo - sconto; 
+   
 
 }
 else{
     sconto = 0;
+    
 }
 
-
+console.log(sconto)
+console.log(prezzo)
 document.getElementById('tot').innerHTML = prezzo.toFixed(2); 
