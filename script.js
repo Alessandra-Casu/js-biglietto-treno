@@ -29,10 +29,13 @@ if( anni < 18){
    
 
 }
+/*
+
 else{
     sconto = 0;
     
 }
+ */
 
 console.log(sconto)
 console.log(prezzo)
