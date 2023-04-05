@@ -16,11 +16,14 @@ const prezzo = km * 0.21 ;
 if( anni < 18){
     
     sconto = (prezzo * 20) /100;
-    document.getElementById('tot').innerHTML = sconto; 
+    
 
 }else if( anni >  65)
 {
     sconto = (prezzo * 40) /100;
-    document.getElementById('tot').innerHTML = sconto; 
+    
 
 }
+
+prezzoScontato = prezzo - sconto;
+ document.getElementById('tot').innerHTML = prezzoScontato; 
