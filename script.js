@@ -11,22 +11,25 @@ L'output del prezzo finale va messo fuori in forma umana (con massimo due decima
 
 const km = parseInt(prompt('Quanti km vuoi percorrere? '));
 const anni = parseInt(prompt('Quanti anni hai? '));
-const prezzo = km * 0.21 ;
+let prezzo = km * 0.21 ;
+let sconto;
 
 
 
 if( anni < 18){
 
-    sconto = (prezzo * 20) /100;  
+    sconto = (prezzo * 20) /100;
+    prezzo = prezzo - sconto; 
 
 }else if( anni >  65)
 {
     sconto = (prezzo * 40) /100;
+    prezzo = prezzo - sconto; 
+
 }
 else{
-
-    document.getElementById('tot').innerHTML = prezzo.toFixed(2);
+    sconto = 0;
 }
 
-const prezzoScontato = prezzo - sconto;
-document.getElementById('tot').innerHTML = prezzoScontato.toFixed(2); 
+
+document.getElementById('tot').innerHTML = prezzo.toFixed(2); 
