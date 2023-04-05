@@ -13,17 +13,18 @@ const km = parseInt(prompt('Quanti km vuoi percorrere? '));
 const anni = parseInt(prompt('Quanti anni hai? '));
 const prezzo = km * 0.21 ;
 
-if( anni < 18){
-    
-    sconto = (prezzo * 20) /100;
-    
 
+if( anni < 18){
+
+    sconto = (prezzo * 20) /100;  
+    
 }else if( anni >  65)
 {
     sconto = (prezzo * 40) /100;
-    
-
+}
+else{
+    document.getElementById('tot').innerHTML = prezzo.toFixed(2);
 }
 
-prezzoScontato = prezzo - sconto;
- document.getElementById('tot').innerHTML = prezzoScontato; 
+ const prezzoScontato = prezzo - sconto;
+ document.getElementById('tot').innerHTML = prezzoScontato.toFixed(2); 
